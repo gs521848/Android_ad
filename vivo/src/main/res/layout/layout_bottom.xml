@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+ android:layout_width="match_parent"
+    android:layout_height="40dp" android:background="#00000000"
+
+    >
+
+<!--    <ImageView-->
+<!--        android:id="@+id/iv_go_oppo"-->
+<!--        android:layout_width="50dp"-->
+<!--        android:layout_height="50dp"-->
+<!--        android:src="@drawable/jump"-->
+<!--        android:layout_gravity="left|center_vertical"-->
+<!--        />-->
+
+
+
+    <LinearLayout
+
+        android:orientation="horizontal"
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="0dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <TextView
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:visibility="visible"
+            android:id="@+id/tv_contact"
+            android:clickable="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/privacy_btn"
+            android:textColor="@android:color/white"
+            android:text="  联系客服  "
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:paddingBottom="2dp"
+            android:textSize="12dp"
+
+            />
+
+        <View
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:visibility="visible"
+
+            android:id="@+id/btn_privacy"
+            android:clickable="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/privacy_btn"
+            android:textColor="@android:color/white"
+            android:text="  隐私政策  "
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:paddingBottom="2dp"
+            android:textSize="12dp"
+            />
+<!--        <TextView-->
+
+
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:textColor="#ffffff"-->
+<!--            android:text="客服邮箱( 2943847405@qq.com )"-->
+<!--            android:layout_gravity="center"-->
+<!--            android:gravity="center"-->
+<!--            android:textSize="12dp"-->
+<!--            />-->
+
+    </LinearLayout>
+
+
+
+<!--    <Button-->
+<!--        android:id="@+id/btn_goto_exit"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="35dp"-->
+<!--        android:text="退出游戏"-->
+<!--        android:layout_gravity="right|center_vertical"-->
+<!--        android:clickable="true"-->
+<!--        android:textSize="10dp"-->
+<!--        />-->
+
+
+</FrameLayout>

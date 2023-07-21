@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.njsr.mnhtfj.nearme.gamecenter">
+    <application android:networkSecurityConfig="@xml/network_security_config">
+
+        <activity android:configChanges="density|fontScale|keyboard|keyboardHidden|layoutDirection|locale|mcc|mnc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|touchscreen|uiMode" android:hardwareAccelerated="false" android:label="@string/app_name" android:launchMode="singleTask"
+            android:name="com.unity3d.start.PrivacyActivity" android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+            >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+                <category android:name="android.intent.category.LEANBACK_LAUNCHER"/>
+            </intent-filter>
+        </activity>
+
+        <activity android:name="com.unity3d.start.SplashAdActivity"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+            android:screenOrientation="portrait"
+            android:exported="false"
+            >
+        </activity>
+
+        <activity android:name="com.unity3d.start.SplashActivity"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+            android:screenOrientation="portrait"
+            android:exported="false"
+            >
+        </activity>
+
+        <meta-data android:name="debug_mode"
+            android:value="false" /> <!-- 调试开关，发布时候设置false -->
+        <meta-data android:name="is_offline_game"
+            android:value="true" /> <!-- true:单机游戏 false:网游 -->
+        <meta-data android:name="app_key"
+            android:value="37d6baad95f841acb540ae30107e5bf8" /> <!--appKey,务必换成游戏自己的参数 -->
+        <uses-library android:name="org.apache.http.legacy" android:required="false" />
+
+    </application>
+</manifest>

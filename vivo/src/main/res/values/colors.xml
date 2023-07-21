@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="transparent">#0000</color>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="title_color">#2f2f2f</color>
+    <color name="desc_color">#8f8f8f</color>
+    <color name="action_bn_text_color">#ffffff</color>
+    <color name="splash_bg_color">#ffffff</color>
+    <color name="tag_font">#777777</color>
+    <color name="reply_font">#ff0000</color>
+    <color name="colorWhite">#FFFFFFFF</color>
+    <color name="colorBlack">#FF000000</color>
+    <color name="colorGray">#878787</color>
+    <color name="colorOrange">#FFE26C25</color>
+    <color name="colorBlue">#FF036EB8</color>
+    <color name="ReD">#ff0000</color>
+
+    <!-- 弹出框 -->
+    <color name="dialog_title">#e6000000</color>
+    <color name="black">#000000</color>
+    <color name="white">#ffffff</color>
+    <color name="blue">#214EF3</color>
+    <color name="demo_20_percent_gray">#338D8D8D</color>
+</resources>

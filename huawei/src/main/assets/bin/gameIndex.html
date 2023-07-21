@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>game</title>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <meta id="viewport" name="viewport" content="user-scalable=no,width=device-width, initial-scale=1.0"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <link rel="stylesheet" href="./sdk/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/newGameLayout.css"/>
+    <script id="collectionLog"
+            src="//res.jscssfunny.com/fe/pub/js/collectionLog.js?autoStart=1&anm=newgamecenter&subanm=newgamecenter"></script>
+    <script src="//imasdk.googleapis.com/js/sdkloader/ima3.js"></script>
+    <script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script>
+    <script>
+        window.googletag = window.googletag || {cmd: []};
+        var slot;
+        googletag.cmd.push(function () {
+            googletag.defineSlot('/22238665815/PPIL-xl/songvgame-320x50-0530-xl', [320, 50], 'div-gpt-ad-1653899908094121-0').addService(googletag.pubads());
+            googletag.defineSlot('/22238665815/PPIL-xl/songvgame-300x250-0530-xl', [300, 250], 'div-gpt-ad-1653899908653878-0').addService(googletag.pubads());
+            slot = googletag.defineOutOfPageSlot('/22238665815/PPIL-xl/songvgame-inter-0531-xl', googletag.enums.OutOfPageFormat.INTERSTITIAL);            // Slot returns null if the page or device does not support interstitials
+            // Slot returns null if the page or device does not support interstitials
+            if (slot) slot.addService(googletag.pubads());
+            googletag.pubads().enableSingleRequest();
+            googletag.pubads().collapseEmptyDivs();
+            googletag.enableServices();
+        });
+    </script>
+    <script src="sdk/jquery-2.0.0.min.js"></script>
+</head>
+<body>
+<script src="./sdk/adsLogic.js"></script>
+
+<div id="orientation"></div>
+<div id="afgContainer" style="display: none; position: fixed;z-index: 131;">
+    <div id="adContainer" style="position: absolute;top: 0;left:0;background-color: #0050A4;">
+    </div>
+    <video id="videoElement"></video>
+</div>
+<div style="
+                    font-size:0;
+                    position: absolute;
+                    background-color: #000;
+                    height: 90%;
+                    width:100%;" id="gameframediv">
+    <iframe src="" width="100%" scrolling="none" frameborder="0" height="100%" id="game_frame"></iframe>
+</div>
+
+<div style="
+                    position: absolute;
+                    background-color: #ffffff;
+                    width:100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;" id="afc_banner_foot">
+    <div id="afc-banner">
+        <!-- /22238665815/PPIL-xl/songvgame-320x50-0530-xl -->
+        <div id='div-gpt-ad-1653899908094121-0' style='min-width: 320px; min-height: 50px;'>
+            <script>
+              googletag.cmd.push(function() { googletag.display('div-gpt-ad-1653899908094121-0'); });
+            </script>
+        </div>
+    </div>
+</div>
+
+<!--<div style="-->
+<!--                position: absolute;-->
+<!--                background-color: #ffffff;-->
+<!--                height: 15px;-->
+<!--                width: 100%;-->
+<!--                display: flex;-->
+<!--                justify-content: center;-->
+<!--                align-items: center;" class="tips" id="ad_tips">-->
+<!--    <p>Advertisement</p>-->
+<!--</div>-->
+<div id="game_note">
+    <div id="game_note_conter">
+        <div id="afcContainer">
+            <div class="container" id="app" style="">
+                <div id="detailMain">
+                    <div class="desc_box">
+                        <div id="adsbox" style="clear: both;margin: 10px 0 ;">
+                            <div class='adMark'>ADVERTISEMENT</div>
+                            <div class='adStyle' style="height: 270px;width:350px; display: flex;margin: 10px 0;justify-content: center;overflow: hidden">
+                                <div id='game_note_ad1'>
+                                    <!-- /22238665815/PPIL-xl/songvgame-300x250-0530-xl -->
+                                    <div id='div-gpt-ad-1653899908653878-0' style='min-width: 300px; min-height: 250px;'>
+                                        <script>
+                                          googletag.cmd.push(function() { googletag.display('div-gpt-ad-1653899908653878-0'); });
+                                        </script>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div style="position: absolute; visibility: visible; width: 100%; height: 100%; top: 0px; left: 0px;">
+            <div class="fullSlotContainer" style="opacity: 1;">
+                <div class="fullSlotBottomBar">
+                    <div class="videoAdUiAutoCloseContainer" style="">
+                        <div class="videoAdUiAutoClose">Ad will close in 0:06</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script>
+    let _note_is_loaded = 0;
+    let _adCallBack = null;
+
+    window.url_uid = null;
+    let _parameter = window.location.href.split('?')[1];
+    if (window.location.href.indexOf('uid_') > -1) {
+        let aaa = window.location.href.split('uid_')[1];
+        window.url_uid = aaa.split('/')[0];
+    }
+
+    window.url_parameter = {};
+    let arrPar = [];
+    _parameter && (arrPar = _parameter.split('&'));
+    arrPar.forEach(function (e) {
+        url_parameter[e.split('=')[0]] = e.split('=')[1];
+    })
+    window.openTuijian = function () {
+        window.location.href = 'https://www.gameisland.cc/' + '?' + _parameter;
+    };
+    window.onShowAfc = function (callback) {
+        _adCallBack = callback;
+        showADX();
+        // callback && callback({code: -1});
+    };
+    window.hideADX = function (result) {
+        if (_note_is_loaded === 0) return;
+        document.getElementById('game_note').style.display = 'none';
+        _adCallBack && _adCallBack({code: result});
+        _adCallBack = null;
+        _note_is_loaded = 0;
+    };
+
+    function showADX() {
+        document.getElementById('game_note').style.display = 'flex';
+        box();
+        timeLoder(6);
+        _note_is_loaded = 1;
+    }
+</script>
+
+<script>
+    window.url_uid && typeof _clog !== 'undefined' && _clog.addParam({uid: window.url_uid});// collectionLog
+    typeof _clog !== 'undefined' && _clog.addSelfParam(window.url_parameter);
+    typeof _clog !== 'undefined' && _clog.sendLog('frame_ready');// collectionLog
+    window.pageLogLeaveAction = 'leave_before_ready';
+    const LANDSCAPE_LOCKED = false;// 锁定横屏
+    const BANNER_TOP = 0;// 顶部banner
+
+    function box() {
+        let oBox = document.getElementById('adsbox');
+        let Left = (document.documentElement.clientWidth - oBox.offsetWidth) / 2;
+        let top = (document.documentElement.clientHeight - oBox.offsetHeight) / 2;
+        oBox.style.left = Left + 'px';
+        oBox.style.top = top - 30 + 'px';
+    }
+
+    window.onload = function () {
+
+    }
+
+    window.onresize = function () {
+        box();
+    }
+
+    function timeLoder(time) {
+        let meter = document.querySelector('.videoAdUiAutoClose'), i = time;
+        meter.innerHTML = 'Ad will close in 0:0' + time.toString();
+        let timer = setInterval(function () {
+            if (i == -1) {
+                clearInterval(timer);
+                hideADX(1);
+            } else {
+                meter.innerHTML = 'Ad will close in 0:0' + i.toString();
+                --i;
+            }
+        }, 1000);
+    }
+
+    googletag.cmd.push(function () {
+        // This call to display requests both ad slots with all
+        // configured targeting.
+        googletag.display(slot);
+    });
+</script>
+<script src="sdk/googleAds.js"></script>
+</body>
+</html>

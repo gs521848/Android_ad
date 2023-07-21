@@ -1,0 +1,18 @@
+{
+  "version": 2,
+  "artifactType": {
+    "type": "APK",
+    "kind": "Directory"
+  },
+  "applicationId": "com.igame.xmrwh.tytdzz.huawei",
+  "variantName": "processHuaweiReleaseResources",
+  "elements": [
+    {
+      "type": "SINGLE",
+      "filters": [],
+      "versionCode": 6,
+      "versionName": "1.0.6",
+      "outputFile": " mnjt_huawei_v1.0.6_6_2022-09-19.apk"
+    }
+  ]
+}

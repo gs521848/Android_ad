@@ -1,0 +1,7 @@
+include ':huawei'
+include ':oppo'
+include ':vivo'
+include ':mylibrary'
+include ':vivoold'
+include ':app'
+rootProject.name = "MyApplication"

@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.xmmy.fjmnfx.vivo">
+    <application android:networkSecurityConfig="@xml/network_security_config">
+        <!--    <activity android:name="com.njzlzs.yzdcg.vivo.SplashActivity"-->
+        <!--        android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen"-->
+        <!--        android:configChanges="orientation|keyboardHidden|navigation|screenSize"-->
+        <!--        >-->
+        <!--        <intent-filter>-->
+        <!--            <action android:name="android.intent.action.MAIN"/>-->
+        <!--            <category android:name="android.intent.category.LAUNCHER"/>-->
+        <!--            <category android:name="android.intent.category.LEANBACK_LAUNCHER"/>-->
+        <!--        </intent-filter>-->
+        <!--    </activity>-->
+
+<!--        <activity android:name="com.igame.adlib.SplashAdActivity"-->
+<!--            android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen"-->
+<!--            android:configChanges="orientation|keyboardHidden|navigation|screenSize"-->
+<!--            android:screenOrientation="portrait"-->
+<!--            >-->
+<!--            &lt;!&ndash;            <intent-filter>&ndash;&gt;-->
+<!--            &lt;!&ndash;                <action android:name="android.intent.action.MAIN"/>&ndash;&gt;-->
+<!--            &lt;!&ndash;                <category android:name="android.intent.category.LAUNCHER"/>&ndash;&gt;-->
+<!--            &lt;!&ndash;                <category android:name="android.intent.category.LEANBACK_LAUNCHER"/>&ndash;&gt;-->
+<!--            &lt;!&ndash;            </intent-filter>&ndash;&gt;-->
+<!--        </activity>-->
+
+
+        <activity
+            android:name="player.SplashActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen"
+
+            android:exported="false"
+            />
+
+<!--        <activity android:configChanges="density|fontScale|keyboard|keyboardHidden|layoutDirection|locale|mcc|mnc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|touchscreen|uiMode" android:hardwareAccelerated="false" android:label="@string/app_name" android:launchMode="singleTask"-->
+<!--            android:name="com.igame.adlib.PrivacyActivity" android:screenOrientation="portrait"-->
+<!--            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"-->
+<!--            >-->
+<!--            <intent-filter>-->
+<!--                <action android:name="android.intent.action.MAIN"/>-->
+<!--                <category android:name="android.intent.category.LAUNCHER"/>-->
+<!--                <category android:name="android.intent.category.LEANBACK_LAUNCHER"/>-->
+<!--            </intent-filter>-->
+<!--        </activity>-->
+
+
+
+        <!--游戏首次启动时展示的隐私协议-->
+        <activity
+            android:name="player.protocol.ProtocolActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="android.intent.category.LEANBACK_LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+
+
+        <meta-data
+            android:name="vivo_union_sdk"
+            android:value="4.7.2.0" />
+
+        <!-- vivo sdk componets start -->
+        <activity android:name="com.vivo.unionsdk.ui.UnionActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize"
+            android:theme="@android:style/Theme.Dialog"
+            android:exported="false"
+            tools:ignore="AppLinkUrlError">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data
+                    android:scheme="vivounion"
+                    android:host="union.vivo.com"
+                    android:path="/openjump"/>
+            </intent-filter>
+        </activity>
+        <!-- vivo sdk componets end -->
+
+
+
+
+
+
+<!--        &lt;!&ndash;以下vivo配置为必须 &ndash;&gt;-->
+<!--        <activity-->
+<!--            android:name="com.vivo.mobilead.web.VivoADSDKWebView"-->
+<!--            android:screenOrientation="landscape"-->
+<!--            android:configChanges="orientation|keyboardHidden|screenSize">-->
+<!--        </activity>-->
+<!--        <activity-->
+<!--            android:name="com.vivo.mobilead.video.RewardVideoActivity"-->
+<!--            android:hardwareAccelerated="true"-->
+<!--            android:screenOrientation="landscape"-->
+<!--            android:configChanges="orientation|keyboardHidden|screenSize" />-->
+<!--        &lt;!&ndash;如果是横屏应用，则配置横屏；否者配置竖屏&ndash;&gt;-->
+<!--        <activity-->
+<!--            android:name="com.vivo.mobilead.unified.reward.RewardVideoActivity"-->
+<!--            android:hardwareAccelerated="true"-->
+<!--            android:screenOrientation="landscape"-->
+<!--            android:configChanges="orientation|keyboardHidden|screenSize" />-->
+<!--        <activity-->
+<!--            android:name="com.vivo.mobilead.unified.interstitial.InterstitialVideoActivity"-->
+<!--            android:hardwareAccelerated="true"-->
+<!--            android:screenOrientation="landscape"-->
+<!--            android:configChanges="orientation|keyboardHidden|screenSize" />-->
+
+
+<!--        <provider-->
+<!--            android:authorities="${applicationId}.vivoprovider"-->
+<!--            android:name="com.vivo.mobilead.manager.VivoContentProvider"-->
+<!--            android:exported="false" />-->
+
+<!--        &lt;!&ndash;用于判断 sdk 版本，android:value 指为 sdk 版本号&ndash;&gt;-->
+<!--        <meta-data android:name="vivo_ad_version_code" android:value="5103"/>-->
+
+
+
+
+    </application>
+
+    <!-- SDK 必须的权限 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!--    此权限一定要加，否则下载类广告不会进入安装流程，影响后向体验-->
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+    <!--可选权限-->
+    <!--如果需要精确定位的话请加上此权限-->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <!-- 如果接入了视频相关的广告, 请务必添加否则黑屏 -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+
+    <!--联运SDK跳转游戏中心-->
+    <uses-permission android:name="vivo.game.permission.OPEN_JUMP_INTENTS"/>
+    <!--联运SDK监听网络状态变化，在支付登录过程中做一些异常处理-->
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE"/>
+    <!--允许程序访问Wi-Fi网络状态信息-->
+<!--    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>-->
+    <!--允许程序打开网络套接字-->
+<!--    <uses-permission android:name="android.permission.INTERNET"/>-->
+    <!--允许程序访问有关GSM网络信息-->
+<!--    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>-->
+    <!--读取imei 这个要动态获取 否则数据统计会异常-->
+<!--    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>-->
+    <!--联运sdk写入内容到sd卡-->
+<!--    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>-->
+    <!--强制安装联运APK时，需要从SDK中读取APK文件-->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <!--判断游戏是否是在主进程初始化，避免初始化进程错误导致功能不可用-->
+    <uses-permission android:name="android.permission.GET_TASKS"/>
+    <!--获取安装权限-->
+
+
+</manifest>
